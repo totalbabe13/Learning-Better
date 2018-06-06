@@ -1,0 +1,178 @@
+
+/* 
+GRID PROPERTIES for the PARENT Object:
+- - - - - - - - - - - -
+.wrapper {
+ display: grid;
+}
+
+* -->grid-template-columns:[];
+* -->grid-template-row:[];
+* -->grid-template: rows / columns ;
+
+* -->grid-template-area:[];
+* -->grid-gap:[];
+
+AVAILABLE units as Values:;
+** 1fr - 10% - 100px - 
+
+** --> the first number in the parenthese
+ tells how many times to multiply 
+ the dimensions  -> 
+
+ repeat(3, 100px)
+
+** --> minmax: 
+grid-template-columns: 
+100px minmax(100px, 500px) 100px;
+
+The second column will always
+be between 100 and 500 pixels wide.
+
+** -->grid-gap:; 
+set the row and 
+column gap at the same time. 
+
+grid-gap: (row)20px (column)10px;
+
+example:
+grid-gap: 20px 10px;
+
+
++ * + * + * + * + * + * + * + * + 
+* + * + * + * + * + * + * + * + * 
+
+GRID ITEMS: properties -->
+
+THESE are properties 
+and values that position your items
+
+Row grid LINES and column grid LINES start
+at 1 and end at a value that is 
+1 greater than the number rows/columns
+
+** --> grid-row-start: [];
+** --> grid-row-end: [];
+** --> grid-row:[];
+
+grid row is a shorthand: 
+.a {
+  grid-row: 5 / 7;
+}
+
+** --> grid-column-start: [];
+** --> grid-column-end: [];
+
+grid column is a shorthand: 
+.a {
+  grid-column: 5 / 7;
+}
+
+When using these properties, we can use 
+the keyword SPAN to start or end a column or row 
+
+.item {
+  grid-column: 4 / span 2;
+}
+
+This is telling the item element to begin
+in column four and take up two columns of space.
+
+
++ * + * + * + * + * + * + * + * + 
+* + * + * + * + * + * + * + * + * 
+
+
+!-- GRID AREA --!
+grid-area. This property will set the starting 
+and ending positions for both the rows 
+and columns of an item.
+
+.item {
+  grid-area: 2 / 3 / 4 / span 5;
+}
+ORDER OF VALUES:
+
+grid-row-start
+grid-column-start
+grid-row-end
+grid-column-end
+ 
+
+ - - - - - - - - - - - - 
+
+grid-template-areas
+justify-items
+justify-content
+justify-self
+align-items
+align-content
+align-self
+grid-auto-rows
+grid-auto-columns
+grid-auto-flow
+
+
+
+*/
+body { 
+ background: #57f9b3; 
+ /* background-image: url("../images/desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: 800px; */
+  
+}
+
+.wrapper {
+  display: grid;
+  grid-template: 1fr / 1fr;
+ 
+  height: 500px;
+  width: 500px; 
+  margin: 200px;
+}
+
+.bg {
+  box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.5), 0 60px 60px 0 rgba(0, 0, 0, 0.19);
+ 
+}
+}
+
+
+/*
+
+.grid {
+  border: 2px blue solid;
+  height: 500px;
+  width: 500px; 
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+   grid-gap: 10px 15px;
+  margin-left: 40px;
+  grid-template-areas:
+  "afirst ."
+  ". bsecond"
+  "cthird ."
+  
+  ;
+}
+
+.afirst {
+  grid-area: afirst;
+}
+
+.bleft {
+  grid-area: bsecond;
+}
+
+.cright {
+  grid-area: cthird;
+}
+.box {
+  background-color: beige;
+  color: black;
+  border-radius: 5px;
+  border: 2px dodgerblue solid;
+} */
+
+
