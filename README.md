@@ -1,6 +1,8 @@
 # Learning-Better
 practice makes better
 
+learning to add files to github
+
 i will work more focused, and have a btter attitude 
 i will keep trying 
 i will persevere
